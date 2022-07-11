@@ -1,6 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import WelcomePageScreen from "../screens/WelcomePageScreen";
 const Stack = createNativeStackNavigator();
 
 const MainApp = ({ onLayoutRootView }) => {
@@ -11,6 +12,10 @@ const MainApp = ({ onLayoutRootView }) => {
                     headerShown: false,
                 }}
             >
+                <Stack.Screen
+                    name="WelcomePage"
+                    component={WelcomePageScreen}
+                />
             </Stack.Navigator>
         </NavigationContainer>
   )
