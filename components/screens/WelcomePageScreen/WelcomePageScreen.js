@@ -1,11 +1,9 @@
-import { View, Text } from 'react-native'
+import { View, Text, ImageBackground } from 'react-native'
 import React from 'react'
 
 const WelcomePageScreen = () => {
   return (
-    <View>
-      <Text>WelcomePageScreen</Text>
-    </View>
+    <ImageBackground source={require("./assets/img/welcomePageBackground.jpg")}></ImageBackground>
   )
 }
 
