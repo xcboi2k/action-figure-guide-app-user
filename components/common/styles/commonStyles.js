@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 import styled from "styled-components/native";
 
 import colors from "assets/themes/colors";
-import { FONTS } from "constants/constant";
+import { FONTS } from "constants/constants.js";
 
 const commonStyles = StyleSheet.create({
     defaultPage: {

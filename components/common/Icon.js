@@ -1,5 +1,5 @@
 import React from "react";
-import { ICON_NAMES } from "constants/constant";
+import { ICON_NAMES } from "constants/constants.js";
 
 import BackIcon from "assets/icons/BackIcon";
 

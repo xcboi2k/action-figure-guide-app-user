@@ -3,7 +3,7 @@ import { TouchableOpacity } from "react-native";
 // Import Styled Components
 import { ButtonContainer, ButtonLabel } from "./styles";
 import Icon from "components/common/Icon";
-import colors from "assets/themes/colors";
+import colors from "assets/themes/colors.js"
 
 // Default Styles Of active BUttons
 TouchableOpacity.defaultProps = {
