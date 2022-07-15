@@ -9,7 +9,7 @@ const commonStyles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: colors.primary.colorTwo,
+        backgroundColor: colors.primary.colorOne,
     },
 });
 
@@ -17,7 +17,7 @@ export const Container = styled.View`
     flex: 1;
     align-items: center;
     justify-content: center;
-    background-color: ${colors.primary.colorTwo};
+    background-color: ${colors.primary.colorOne};
 `;
 
 export const Title2 = styled.Text`
