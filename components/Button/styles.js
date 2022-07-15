@@ -25,6 +25,5 @@ export const ButtonLabel = styled.Text`
     text-align: center;
     font-family: ${FONTS.BOLD};
     text-transform: uppercase;
-    color: ${(props) =>
-        props.type === "filled" ? colors.white : colors.primary.colorFive};
+    color: ${colors.primary.colorTwo};
 `;
