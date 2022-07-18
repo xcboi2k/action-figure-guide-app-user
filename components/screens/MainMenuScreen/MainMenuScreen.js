@@ -10,15 +10,12 @@ import {
 import Button from 'components/Button';
 import ScreenHeader from 'components/ScreenHeader';
 import AboutPanel from 'components/AboutPanel';
-import { ICON_NAMES } from "constants/constants";
 
-const MainMenuScreen = () => {
+const MainMenuScreen = ({ navigation }) => {
   return (
     <MainMenuContainer>
         <ScreenHeader 
             title="Main Menu"
-            iconName={ICON_NAMES.BACK}
-            iconSize="32"
         />
         <HolderContainer>
             <Image
@@ -34,6 +31,8 @@ const MainMenuScreen = () => {
                 type="filled"
                 width="50%"
                 rounded="25px"
+                onPress={() =>
+                    navigation.navigate("Categories")}
             />
         </HolderContainer>
     </MainMenuContainer>

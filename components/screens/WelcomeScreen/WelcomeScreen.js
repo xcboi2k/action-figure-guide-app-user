@@ -4,8 +4,6 @@ import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native';
 
 //LOCAL IMPORTS
 import Button from "components/Button";
-import ScreenHeader from "components/ScreenHeader";
-import { ICON_NAMES } from "constants/constants";
 
 const WelcomeScreen = ({ navigation }) => {
     return(

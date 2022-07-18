@@ -7,13 +7,7 @@ import {FONTS} from "constants/constants.js";
 export const ButtonContainer = styled.TouchableOpacity`
     width: ${({ width }) => width};
     padding: 10px;
-    border-width: 2px;
-    background-color: ${(props) =>
-        props.type === "filled" ? colors.primary.colorFive : colors.white};
-    border-color: ${(props) =>
-        props.type === "filled" || props.noBorder
-            ? "transparent"
-            : colors.primary.colorFive};
+    background-color: ${colors.primary.colorFive};
     border-radius: ${({ rounded }) => rounded};
     flex-direction: row;
     align-items: center;
