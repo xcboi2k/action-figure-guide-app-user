@@ -11,6 +11,7 @@ import ScreenHeader from 'components/ScreenHeader';
 import { ICON_NAMES } from "constants/constants";
 
 import { category1Data } from 'sampleData/SampleData';
+import Button from 'components/Button';
 
 const FigureMenuScreen = ({ navigation }) => {
     const [selectedId, setSelectedId] = useState(null);
@@ -42,6 +43,14 @@ const FigureMenuScreen = ({ navigation }) => {
                 keyExtractor={(item) => item.figureID}
                 extraData={setSelectedId}
             /> */}
+            <Button
+                title="About"
+                type="filled"
+                width="35%"
+                rounded="25px"
+                onPress={() =>
+                  navigation.navigate("Showcase")}
+                />
         </HolderContainer>
     </FigureMenuContainer>
   )

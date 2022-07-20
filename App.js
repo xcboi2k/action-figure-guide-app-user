@@ -11,6 +11,8 @@ import WelcomeScreen from "components/screens/WelcomeScreen/WelcomeScreen";
 import MainMenuScreen from "components/screens/MainMenuScreen";
 import CategoriesScreen from "components/screens/CategoriesScreen";
 import FigureMenuScreen from "components/screens/FigureMenuScreen/FigureMenuScreen";
+import ShowcaseScreen from "components/screens/ShowcaseScreen";
+import FigureInformationScreen from "components/screens/FigureInformationScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +23,7 @@ export default function App() {
     "Inter-Regular": require('assets/fonts/Inter-Regular.otf'),
     "Inter-Medium": require('assets/fonts/Inter-Medium.otf'),
     "Inter-Black": require('assets/fonts/Inter-Black.otf'),
+    "Inter-Italic": require('assets/fonts/Inter-Italic.otf'),
   });
 
   if (!fontsLoaded) {
@@ -36,6 +39,8 @@ export default function App() {
         <Stack.Screen name="MainMenu" component={MainMenuScreen} />
         <Stack.Screen name="Categories" component={CategoriesScreen} />
         <Stack.Screen name="FigureMenu" component={FigureMenuScreen} />
+        <Stack.Screen name="Showcase" component={ShowcaseScreen} />
+        <Stack.Screen name="FigureInfo" component={FigureInformationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
