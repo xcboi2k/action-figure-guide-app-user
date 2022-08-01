@@ -13,6 +13,19 @@ import { ICON_NAMES } from "constants/constants";
 import { category1Data } from 'sampleData/SampleData';
 import Button from 'components/Button';
 
+const DATA = [
+    {
+        figureID: "1",
+        figureName: "Padme Amidala",
+        figureVersion: "(Attack of the Clones)"
+    },
+    {
+        figureID: "2",
+        figureName: "Padme Amidala",
+        figureVersion: "(Attack of the Clones)"
+    },
+];
+
 const FigureMenuScreen = ({ navigation }) => {
     const [selectedId, setSelectedId] = useState(null);
 
@@ -37,12 +50,12 @@ const FigureMenuScreen = ({ navigation }) => {
                 navigation.navigate("Categories")}
         />
         <HolderContainer>
-            {/* <FlatList
-                data={category1Data}
+            <FlatList
+                data={DATA}
                 renderItem={renderFigurePanelItem}
                 keyExtractor={(item) => item.figureID}
-                extraData={setSelectedId}
-            /> */}
+                // extraData={setSelectedId}
+            />
             <Button
                 title="About"
                 type="filled"
