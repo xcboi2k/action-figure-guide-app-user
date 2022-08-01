@@ -17,12 +17,12 @@ const DATA = [
     {
         figureID: "1",
         figureName: "Padme Amidala",
-        figureVersion: "(Attack of the Clones)"
+        figureVersion: "(Attack of the Clones)",
     },
     {
         figureID: "2",
         figureName: "Padme Amidala",
-        figureVersion: "(Attack of the Clones)"
+        figureVersion: "(Attack of the Clones)",
     },
 ];
 
