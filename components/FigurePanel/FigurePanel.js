@@ -7,14 +7,15 @@ import {
     Subhead
 } from './styles'
 
-const FigurePanel = (
-    onPress,
-    name,
-    version) => {
+const FigurePanel = ({
+  onPress,
+  name,
+  version
+}) => {
   return (
-    <ItemContainer>
+    <ItemContainer onPress={onPress}>
         <Title>{name}</Title>
-        {version && <Subhead>{version}</Subhead>}
+        <Subhead>{version}</Subhead>
     </ItemContainer>
   )
 }

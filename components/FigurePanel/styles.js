@@ -8,13 +8,12 @@ export const ItemContainer = styled.TouchableOpacity`
     background-color: ${colors.primary.colorFive};
     padding: 15px;
     margin-bottom: 10px;
-    flex-direction: row;
     align-items: center;
 `;
 
 export const Title = styled.Text`
     font-family: ${FONTS.BOLD};
-    font-size: 16px;
+    font-size: 20px;
     color: ${colors.primary.colorTwo};
     padding: 2px;
 `;

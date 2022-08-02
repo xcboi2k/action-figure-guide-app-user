@@ -1,4 +1,4 @@
-import { FlatList } from 'react-native'
+import { FlatList, Text } from 'react-native'
 import React, {useState} from 'react'
 
 import { 
@@ -13,19 +13,6 @@ import { ICON_NAMES } from "constants/constants";
 import { category1Data } from 'sampleData/SampleData';
 import Button from 'components/Button';
 
-const DATA = [
-    {
-        figureID: "1",
-        figureName: "Padme Amidala",
-        figureVersion: "(Attack of the Clones)",
-    },
-    {
-        figureID: "2",
-        figureName: "Padme Amidala",
-        figureVersion: "(Attack of the Clones)",
-    },
-];
-
 const FigureMenuScreen = ({ navigation }) => {
     const [selectedId, setSelectedId] = useState(null);
 
@@ -33,8 +20,7 @@ const FigureMenuScreen = ({ navigation }) => {
         return(
             <FigurePanel 
                 onPress={() =>
-                    navigation.navigate("MainMenu")
-                }
+                    navigation.navigate("Showcase")}
                 name={item.figureName}
                 version={item.figureVersion}
             />
@@ -51,10 +37,9 @@ const FigureMenuScreen = ({ navigation }) => {
         />
         <HolderContainer>
             <FlatList
-                data={DATA}
+                data={category1Data}
                 renderItem={renderFigurePanelItem}
                 keyExtractor={(item) => item.figureID}
-                // extraData={setSelectedId}
             />
             <Button
                 title="About"
