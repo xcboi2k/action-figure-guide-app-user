@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 
 import { 
@@ -11,43 +10,59 @@ import ScreenHeader from 'components/ScreenHeader';
 import { ICON_NAMES } from "constants/constants";
 
 const CategoriesScreen = ({ navigation }) => {
-  return (
-    <CategoriesContainer>
-        <ScreenHeader 
-            title="Categories"
-            iconName={ICON_NAMES.BACK}
-            iconSize="32"
-            onPressIcon={() =>
-                navigation.navigate("MainMenu")}
-        />
-        <HolderContainer>
-            <Button 
-                title="Category 1"
-                type="filled"
-                width="80%"
-                rounded="25px"
-                onPress={() =>
-                    navigation.navigate("FigureMenu")}
+    return (
+        <CategoriesContainer>
+            <ScreenHeader 
+                title="Categories"
+                iconName={ICON_NAMES.BACK}
+                iconSize="32"
+                onPressIcon={() =>
+                    navigation.navigate("MainMenu")}
             />
-        </HolderContainer>
-        <HolderContainer>
-            <Button 
-                title="Category 2"
-                type="filled"
-                width="80%"
-                rounded="25px"
-            />
-        </HolderContainer>
-        <HolderContainer>
-            <Button 
-                title="Category 3"
-                type="filled"
-                width="80%"
-                rounded="25px"
-            />
-        </HolderContainer>
-    </CategoriesContainer>
-  )
+            <HolderContainer>
+                <Button 
+                    title="Basic Assortment 2013-2014"
+                    type="filled"
+                    width="80%"
+                    rounded="25px"
+                    onPress={() =>
+                        navigation.navigate("BA20132014Menu")}
+                />
+            </HolderContainer>
+            <HolderContainer>
+                <Button 
+                    title="Basic Assortment 2014-2015"
+                    type="filled"
+                    width="80%"
+                    rounded="25px"
+                />
+            </HolderContainer>
+            <HolderContainer>
+                <Button 
+                    title="Exclusives 2014-2015"
+                    type="filled"
+                    width="80%"
+                    rounded="25px"
+                />
+            </HolderContainer>
+            <HolderContainer>
+                <Button 
+                    title="Basic Assortment 2015-2017"
+                    type="filled"
+                    width="80%"
+                    rounded="25px"
+                />
+            </HolderContainer>
+            <HolderContainer>
+                <Button 
+                    title="Multipacks 2015-2017"
+                    type="filled"
+                    width="80%"
+                    rounded="25px"
+                />
+            </HolderContainer>
+        </CategoriesContainer>
+    )
 }
 
 export default CategoriesScreen;
