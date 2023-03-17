@@ -15,7 +15,7 @@ const FigurePanel = ({
   return (
     <ItemContainer onPress={onPress}>
         <Title>{name}</Title>
-        <Subhead>{version}</Subhead>
+        <Subhead>({version})</Subhead>
     </ItemContainer>
   )
 }

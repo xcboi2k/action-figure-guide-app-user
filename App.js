@@ -10,8 +10,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from "components/screens/WelcomeScreen/WelcomeScreen";
 import MainMenuScreen from "components/screens/MainMenuScreen";
 import CategoriesScreen from "components/screens/CategoriesScreen";
-import FigureMenuScreen from "components/screens/FigureMenuScreen/FigureMenuScreen";
-import FigureInformationScreen from "components/screens/FigureInformationScreen";
+
+import BA20132014MenuScreen from "components/screens/BA20132014MenuScreen";
+import BA20132014InfoScreen from "components/screens/BA20132014InfoScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -37,8 +38,9 @@ export default function App() {
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="MainMenu" component={MainMenuScreen} />
         <Stack.Screen name="Categories" component={CategoriesScreen} />
-        <Stack.Screen name="FigureMenu" component={FigureMenuScreen} />
-        <Stack.Screen name="FigureInfo" component={FigureInformationScreen} />
+        
+        <Stack.Screen name="BA20132014Menu" component={BA20132014MenuScreen} />
+        <Stack.Screen name="BA20132014Info" component={BA20132014InfoScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
