@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, Image } from 'react-native'
+import { StyleSheet, TextInput, Image, Text } from 'react-native'
 import React, { useEffect, useState } from 'react'
 
 import { 
@@ -9,7 +9,7 @@ import {
     FigureVersionLabel,
     ContentLabel,
     TextContainer,
-    ScrollContainer
+    ScrollContainer,
 } from './styles'
 import ScreenHeader from 'components/ScreenHeader'
 import colors from "assets/themes/colors";
@@ -29,9 +29,14 @@ const BA20132014InfoScreen = ({ route }) => {
 
     const [currentFigure, setCurrentFigure] = useState(() => figureList.find(figures => figures.id === figureID));
 
+    const handleReturn = () => {
+        navigation.navigate("BA20132014Menu");
+        setCurrentFigure('')
+    }
+
+    console.log(figureID)
     useEffect(() => {
         const targetFigure = figureList.find(figures => figures.id === figureID);
-        // console.log(targetTransaction);
         setCurrentFigure(targetFigure);
     }, [figureID]);
 
@@ -41,14 +46,14 @@ const BA20132014InfoScreen = ({ route }) => {
                 title="Figure Information"
                 iconName={ICON_NAMES.BACK}
                 iconSize="32"
-                onPressIcon={() =>
-                    navigation.navigate("BA20132014Menu")}
+                onPressIcon={handleReturn}
             />
-            <FigureLabel>{currentFigure.figure_name}</FigureLabel>
-            <FigureVersionLabel>({currentFigure.figure_name})</FigureVersionLabel>
+            <FigureLabel>{currentFigure.figureName}</FigureLabel>
+            <FigureVersionLabel>({currentFigure.figureVersion})</FigureVersionLabel>
+            
             <Image
-                source={sampleImg}
-                resizeMode={"contain"}
+                src={currentFigure.figurePhotoUrl}
+                resizeMode={"cover"}
                 style={styles.image} >
             </Image>
             <ScrollContainer>
@@ -71,7 +76,7 @@ const BA20132014InfoScreen = ({ route }) => {
                             style={styles.text} 
                             editable={false} 
                             textAlign={'right'}
-                            placeholder={'2012'}
+                            placeholder={currentFigure.figureDateStamp + " "}
                             placeholderTextColor={colors.primary.colorSix}
                         />
                     </TextContainer>
@@ -83,7 +88,7 @@ const BA20132014InfoScreen = ({ route }) => {
                             style={styles.text} 
                             editable={false} 
                             textAlign={'right'}
-                            placeholder={'2013'}
+                            placeholder={currentFigure.figureReleaseDate + " "}
                             placeholderTextColor={colors.primary.colorSix}
                         />
                     </TextContainer>
@@ -95,7 +100,7 @@ const BA20132014InfoScreen = ({ route }) => {
                             style={styles.text} 
                             editable={false} 
                             textAlign={'right'}
-                            placeholder={'14'}
+                            placeholder={currentFigure.figureJointCount + " "}
                             placeholderTextColor={colors.primary.colorSix}
                         />
                     </TextContainer>
@@ -107,7 +112,7 @@ const BA20132014InfoScreen = ({ route }) => {
                             style={styles.text} 
                             editable={false} 
                             textAlign={'right'}
-                            placeholder={'2'}
+                            placeholder={currentFigure.figureAccessoryCount + " "}
                             placeholderTextColor={colors.primary.colorSix}
                         />
                     </TextContainer>
@@ -121,7 +126,7 @@ const BA20132014InfoScreen = ({ route }) => {
                         numberOfLines={5}
                         textAlignVertical={'top'}
                         textAlign={'center'}
-                        placeholder={'Naboo Blaster, Droid Blaster'}
+                        placeholder={currentFigure.figureAccessoryDetails}
                         placeholderTextColor={colors.primary.colorSix}
                     />
                 </ContentContainer2>
@@ -134,7 +139,7 @@ const styles = StyleSheet.create({
     text: {
         height: 50,
         fontSize: 22,
-        fontFamily: FONTS.ITALIC,
+        fontFamily: FONTS.REGULAR,
     },
     text2: {
         height: 100,
@@ -142,7 +147,8 @@ const styles = StyleSheet.create({
         fontFamily: FONTS.ITALIC,
     },
     image: {
-        height: 380,
+        height: 400,
+        width: 300,
         padding: 10,
     },
 });

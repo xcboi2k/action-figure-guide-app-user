@@ -5,7 +5,6 @@ import { db } from "../firebase";
 import useBA20132014Store from "./useBA20132014Store";
 
 const useBA20132014Listener = () => {
-    let [figureData, setFigureData] = useState([]);
     const BA20132014ColRef = collection(db, "BA20132014");
     const figures = useBA20132014Store((state) => (state.figures));
     const setFigures = useBA20132014Store((state) => (state.setFigures));
@@ -16,24 +15,25 @@ const useBA20132014Listener = () => {
             const figureList = [];
             snapshotData.forEach(doc => {
                 figureList.push({
-                    figure_number: doc.data().figure_number,
-                    figure_name: doc.data().figure_name,
-                    figure_version: doc.data().figure_version,
-                    figure_stamp: doc.data().figure_stamp,
-                    figure_release_date: doc.data().figure_release_date,
-                    figure_joint_count: doc.data().figure_joint_count,
-                    figure_accessory_count: doc.data().figure_accessory_count,
-                    figure_accessory_details: doc.data().figure_accessory_details,
+                    figureNumber: doc.data().figure_number,
+                    figureName: doc.data().figure_name,
+                    figureVersion: doc.data().figure_version,
+                    figureDateStamp: doc.data().figure_date_stamp,
+                    figureReleaseDate: doc.data().figure_release_date,
+                    figureJointCount: doc.data().figure_joint_count,
+                    figureAccessoryCount: doc.data().figure_accessory_count,
+                    figureAccessoryDetails: doc.data().figure_accessory_details,
+                    figurePhotoUrl: doc.data().photoUrl,
+                    id: doc.id
                 });
             });
-            console.log(figureList);
-            setFigureData(figureList);
+
             setFigures(figureList);
         });
         return unsubscribe;
     }, []);
 
-    return [figureData];
+    return [];
 };
 
 export default useBA20132014Listener;

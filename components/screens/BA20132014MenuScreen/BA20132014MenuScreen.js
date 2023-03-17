@@ -18,23 +18,20 @@ import useBA20132014Listener from "hooks/useBA20132014Listener";
 
 const BA20132014MenuScreen = ({ navigation }) => {
     const BA20132014List = useBA20132014Store(state => state.figures)
-    const [figureData] = useBA20132014Listener();
+    useBA20132014Listener();
 
     const renderFigurePanelItem = ({ item }) => {
         return(
             <FigurePanel 
                 onPress={() => { handleNavigation(item.id); }}
-                name={item.figure_name}
-                version={item.figure_version}
+                name={item.figureName}
+                version={item.figureVersion}
             />
         );
     };
 
     const handleNavigation = (id) => 
-        navigation.navigate("BA20132014Info", {
-        params: {
-            figureID: id
-        }
+        navigation.navigate("BA20132014Info", {figureID: id
     });
 
     return (
@@ -48,7 +45,7 @@ const BA20132014MenuScreen = ({ navigation }) => {
             />
             <HolderContainer>
                 <FlatList
-                    data={figureData}
+                    data={BA20132014List}
                     renderItem={renderFigurePanelItem}
                     keyExtractor={(item) => item.id}
                 />

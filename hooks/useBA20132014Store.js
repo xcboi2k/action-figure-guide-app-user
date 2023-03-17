@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 
 const BA20132014Store = (set, get) => ({
     figures: [],
