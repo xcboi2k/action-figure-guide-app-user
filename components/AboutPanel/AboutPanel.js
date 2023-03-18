@@ -17,8 +17,8 @@ const AboutPanel = () => {
             </AboutLabel>
         </AboutLabelContainer>
         <AboutTextLabel>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        This application showcases the Star Wars The Black Series 3.75" Action Figure Line. This toy line debuted on August 1, 2013. The figures released in this line featured a higher point of articulation and more detailed sculpts than the Saga Legends line, which was on store shelves at the same time.
+        The information provided came from galacticfigures.com
         </AboutTextLabel>
     </AboutPanelContainer>
   )

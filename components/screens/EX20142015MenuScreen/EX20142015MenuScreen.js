@@ -49,14 +49,6 @@ const EX20142015MenuScreen = ({ navigation }) => {
                     renderItem={renderFigurePanelItem}
                     keyExtractor={(item) => item.id}
                 />
-                <Button
-                    title="About"
-                    type="filled"
-                    width="35%"
-                    rounded="25px"
-                    onPress={() =>
-                        navigation.navigate("EX20142015Info")}
-                    />
             </HolderContainer>
         </FigureMenuContainer>
     )

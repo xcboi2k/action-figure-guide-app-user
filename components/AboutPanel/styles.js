@@ -29,9 +29,9 @@ export const AboutLabel = styled.Text`
 `;
 
 export const AboutTextLabel = styled.Text`
-    margin-top:5px;
+    margin:10px;
     font-family: ${FONTS.REGULAR};
-    font-size: 19px;
+    font-size: 16px;
     color: ${colors.primary.colorSix};
     text-align: center;
 `;

@@ -8,6 +8,6 @@ const BA20142015Store = (set, get) => ({
     },
 });
 
-const useBA20132014Store = create(BA20142015Store);
+const useBA20142015Store = create(BA20142015Store);
 
 export default useBA20142015Store;

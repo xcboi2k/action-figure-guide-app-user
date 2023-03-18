@@ -35,6 +35,8 @@ const CategoriesScreen = ({ navigation }) => {
                     type="filled"
                     width="80%"
                     rounded="25px"
+                    onPress={() =>
+                        navigation.navigate("BA20142015Menu")}
                 />
             </HolderContainer>
             <HolderContainer>
@@ -43,6 +45,8 @@ const CategoriesScreen = ({ navigation }) => {
                     type="filled"
                     width="80%"
                     rounded="25px"
+                    onPress={() =>
+                        navigation.navigate("EX20142015Menu")}
                 />
             </HolderContainer>
             <HolderContainer>
@@ -51,6 +55,8 @@ const CategoriesScreen = ({ navigation }) => {
                     type="filled"
                     width="80%"
                     rounded="25px"
+                    onPress={() =>
+                        navigation.navigate("BA20152017Menu")}
                 />
             </HolderContainer>
             <HolderContainer>
@@ -59,6 +65,8 @@ const CategoriesScreen = ({ navigation }) => {
                     type="filled"
                     width="80%"
                     rounded="25px"
+                    onPress={() =>
+                        navigation.navigate("MU20152017Menu")}
                 />
             </HolderContainer>
         </CategoriesContainer>

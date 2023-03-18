@@ -1,2 +1,2 @@
-import EX20152017MenuScreen from "./EX20152017MenuScreen";
-export default EX20152017MenuScreen;
+import EX20142015MenuScreen from "./EX20142015MenuScreen";
+export default EX20142015MenuScreen;
