@@ -34,4 +34,6 @@ export const AboutTextLabel = styled.Text`
     font-size: 16px;
     color: ${colors.primary.colorSix};
     text-align: center;
+    width: 100%;
+    height: 100%;
 `;
