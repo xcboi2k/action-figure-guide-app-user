@@ -4,6 +4,7 @@ import React from 'react'
 import {
     AboutPanelContainer,
     AboutLabelContainer,
+    AboutTextContainer,
     AboutLabel,
     AboutTextLabel
 } from './styles';
@@ -16,10 +17,12 @@ const AboutPanel = () => {
                 About
             </AboutLabel>
         </AboutLabelContainer>
-        <AboutTextLabel>
-        This application showcases the Star Wars The Black Series 3.75" Action Figure Line. This toy line debuted on August 1, 2013. The figures released in this line featured a higher point of articulation and more detailed sculpts than the Saga Legends line, which was on store shelves at the same time.
-        The information provided came from galacticfigures.com
-        </AboutTextLabel>
+        <AboutTextContainer>
+          <AboutTextLabel>
+          This application showcases the Star Wars The Black Series 3.75" Action Figure Line. This toy line debuted on August 1, 2013. The figures released in this line featured a higher point of articulation and more detailed sculpts than the Saga Legends line, which was on store shelves at the same time.
+          The information provided came from galacticfigures.com
+          </AboutTextLabel>
+        </AboutTextContainer>
     </AboutPanelContainer>
   )
 }

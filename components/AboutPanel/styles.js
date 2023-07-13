@@ -21,6 +21,11 @@ export const AboutLabelContainer = styled.View`
     border-bottom-left-radius: 25px;
 `;
 
+export const AboutTextContainer = styled.View`
+    width: 90%;
+    align-items: center;
+`;
+
 export const AboutLabel = styled.Text`
     font-family: ${FONTS.BOLD};
     font-size: 25px;
