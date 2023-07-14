@@ -10,6 +10,7 @@ import {
 import FigurePanel from 'components/FigurePanel';
 import ScreenHeader from 'components/ScreenHeader';
 import { ICON_NAMES } from "constants/constants";
+import colors from "assets/themes/colors";
 
 import { category1Data } from 'sampleData/SampleData';
 import Button from 'components/Button';
@@ -46,15 +47,15 @@ const BA20142015MenuScreen = ({ navigation }) => {
             />
             <HolderContainer>
                 {isLoading ? (
-                    // Show loader while loading
-                    <ActivityIndicator size="large" color={colors.primary.colorFive}/>
-                    ) : (
-                    // Render the data
-                    <FlatList
-                        data={data}
-                        renderItem={renderFigurePanelItem}
-                        keyExtractor={(item) => item.id}
-                    />
+                // Show loader while loading
+                <ActivityIndicator size="large" color={colors.primary.colorFive}/>
+                ) : (
+                // Render the data
+                <FlatList
+                    data={data}
+                    renderItem={renderFigurePanelItem}
+                    keyExtractor={(item) => item.id}
+                />
                 )}
             </HolderContainer>
         </FigureMenuContainer>

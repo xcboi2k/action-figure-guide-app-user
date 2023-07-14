@@ -10,6 +10,7 @@ import {
 import FigurePanel from 'components/FigurePanel';
 import ScreenHeader from 'components/ScreenHeader';
 import { ICON_NAMES } from "constants/constants";
+import colors from "assets/themes/colors";
 
 import { category1Data } from 'sampleData/SampleData';
 import Button from 'components/Button';
