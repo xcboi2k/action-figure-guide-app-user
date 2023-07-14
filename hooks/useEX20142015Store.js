@@ -2,7 +2,8 @@ import { create } from 'zustand';
 
 const EX20142015Store = (set, get) => ({
     figures: [],
-    setFigures: (data) => set({ figures: data }),
+    isLoading: true,
+    setFigures: (data) => set({ figures: data, isLoading: false }),
     figureList: () => {
         return get().figures;
     },

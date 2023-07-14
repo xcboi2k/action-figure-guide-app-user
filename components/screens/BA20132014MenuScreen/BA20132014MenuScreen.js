@@ -1,4 +1,4 @@
-import { FlatList, Text } from 'react-native'
+import { FlatList, Text, ActivityIndicator } from 'react-native'
 import React, {useState} from 'react'
 import { shallow } from 'zustand/shallow'
 
@@ -10,6 +10,7 @@ import {
 import FigurePanel from 'components/FigurePanel';
 import ScreenHeader from 'components/ScreenHeader';
 import { ICON_NAMES } from "constants/constants";
+import colors from "assets/themes/colors";
 
 import { category1Data } from 'sampleData/SampleData';
 import Button from 'components/Button';
@@ -47,7 +48,7 @@ const BA20132014MenuScreen = ({ navigation }) => {
             <HolderContainer>
                 {isLoading ? (
                 // Show loader while loading
-                <Loader />
+                <ActivityIndicator size="large" color={colors.primary.colorFive}/>
                 ) : (
                 // Render the data
                 <FlatList

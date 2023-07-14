@@ -1,5 +1,6 @@
-import { FlatList, Text } from 'react-native'
+import { FlatList, Text, ActivityIndicator } from 'react-native'
 import React, {useState} from 'react'
+import { shallow } from 'zustand/shallow'
 
 import { 
     FigureMenuContainer,
@@ -17,8 +18,8 @@ import useBA20152017Store from "hooks/useBA20152017Store";
 import useBA20152017Listener from "hooks/useBA20152017Listener";
 
 const BA20152017MenuScreen = ({ navigation }) => {
-    const BA20152017List = useBA20152017Store(state => state.figures)
     useBA20152017Listener();
+    const {data, isLoading} = useBA20152017Store((state) => ({data: state.figures, isLoading: state.isLoading}), shallow)
 
     const renderFigurePanelItem = ({ item }) => {
         return(
@@ -44,11 +45,17 @@ const BA20152017MenuScreen = ({ navigation }) => {
                     navigation.navigate("Categories")}
             />
             <HolderContainer>
-                <FlatList
-                    data={BA20152017List}
-                    renderItem={renderFigurePanelItem}
-                    keyExtractor={(item) => item.id}
-                />
+                {isLoading ? (
+                    // Show loader while loading
+                    <ActivityIndicator size="large" color={colors.primary.colorFive}/>
+                    ) : (
+                    // Render the data
+                    <FlatList
+                        data={data}
+                        renderItem={renderFigurePanelItem}
+                        keyExtractor={(item) => item.id}
+                    />
+                )}
             </HolderContainer>
         </FigureMenuContainer>
     )
